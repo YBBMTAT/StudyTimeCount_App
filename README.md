@@ -8,7 +8,7 @@
 このアプリはフォーカス状態が外れると時間カウンターが止まるようになっています。 
 
 ## アプリURL  
-  https://timecount-app.onrender.com
+  https://studytimecount-app.onrender.com
 
 
 ### ・利用方法
