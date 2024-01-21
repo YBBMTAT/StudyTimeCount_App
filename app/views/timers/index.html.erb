@@ -6,9 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TimeCount_App</title>
     <link rel="stylesheet" type="text/css" href="timer_stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   </head>
 
   <body>
+   <nav class="menu-bar">
+       <div class="icon"><%= image_tag 'gear.svg', alt: 'setting-Icon', class: 'image'%></div>
+       <div class="icon"><%= image_tag 'file-music.svg', alt: 'music-Icon', class: 'image'%></div>
+       <div class="icon"><%= image_tag 'journal-check.svg', alt: 'check-Icon', class: 'image'%></div>
+      <% if user_signed_in? %>
+       <div class="icon">
+        <div class="menu-bar-user">
+          <%= image_tag 'person-fill-add.svg', alt: 'user-Icon', class: 'image'%>
+          <%= current_user.nickname%>
+        </div>
+       </div>
+       <div class="icon"><%= image_tag 'box-arrow-left.svg', alt: 'log-out-Icon', class: 'image'%></div>
+      <% else %>
+        <div class="icon"><%= image_tag 'person-check-fill.svg', alt: 'sign-up-Icon', class: 'image'%></div>
+        <div class="icon"><%= image_tag 'box-arrow-in-right.svg', alt: 'sign-in-Icon', class: 'image'%></div>
+      <% end %>
+   </nav>
    <div class="timer-container">
     <div id="timer-display">00:00:00</div>
     <button id="start-stop-button">開始</button>
