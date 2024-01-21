@@ -17,7 +17,7 @@
     <% if user_signed_in? %>
      <div class="icon">
       <div class="menu-bar-user">
-        <%= image_tag 'person-fill-add.svg', alt: 'user-Icon', class: 'image'%>
+        <%= image_tag 'person-check-fill.svg', alt: 'user-Icon', class: 'image'%>
         <%= current_user.nickname%>
       </div>
      </div>
@@ -25,7 +25,7 @@
      <%= image_tag 'box-arrow-left.svg', alt: 'log-out-Icon', class: 'image'%><% end %></div>
     <% else %>
      <div class="icon"><%= link_to new_user_registration_path do %>
-      <%= image_tag 'person-check-fill.svg', alt: 'sign-up-Icon', class: 'image'%><% end %></div>
+      <%= image_tag 'person-fill-add.svg', alt: 'sign-up-Icon', class: 'image'%><% end %></div>
      <div class="icon"><%= link_to new_user_session_path do %>
       <%= image_tag 'box-arrow-in-right.svg', alt: 'sign-in-Icon', class: 'image'%><% end %></div>
     <% end %>
