@@ -85,7 +85,7 @@ https://docs.google.com/spreadsheets/d/1ptxiyLg4S5ImzEIbil3VLD9RnU6PJ8Pt/edit#gi
 | encrypted_password  | string     | null: false              |
 
 ### Association
-belongs_to :time
+has_many :timers
 belongs_to :usersettings
 
 ## timesテーブル
@@ -101,7 +101,6 @@ belongs_to :user
 | Column              | Type       | Options                       |
 | ------------------- | ---------- | ----------------------------- |
 | user_id             | references | null: false,foreign_key: true |
-| breaktyp            | enum       | null: false                   |
 | breaduration        | datetime   |                               |
 | bgmenabled          | enum       | null: false                   |
 

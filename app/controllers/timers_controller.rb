@@ -1,8 +1,14 @@
 class TimersController < ApplicationController
 
   def index
+    @timers = Timer.all
   end
 
+  def show
+    @cumulative_time = format_duration(current_user.timers.sum(:duration_seconds))
+    @weekly_time = format_duration(current_user.timers.where(created_at: 1.week.ago..Time.now).sum(:duration_seconds))
+  end
+  
   def save
     # 受け取ったデータを処理
     duration_seconds = params[:duration_seconds]
@@ -11,5 +17,11 @@ class TimersController < ApplicationController
     Timer.create(user_id: current_user.id, duration_seconds: duration_seconds)
 
     render json: { status: 'success' }
+  end
+
+private
+
+  def format_duration(seconds)
+    Time.at(seconds).utc.strftime("%H時間%M分%S秒")
   end
 end
