@@ -7,6 +7,7 @@ class TimersController < ApplicationController
   def show
     @cumulative_time = format_duration(current_user.timers.sum(:duration_seconds))
     @weekly_time = format_duration(current_user.timers.where(created_at: 1.week.ago..Time.now).sum(:duration_seconds))
+    @month_time = format_duration(current_user.timers.where(created_at: 1.month.ago..Time.now).sum(:duration_seconds))
   end
   
   def save
