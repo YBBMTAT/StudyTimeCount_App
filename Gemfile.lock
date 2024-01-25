@@ -82,8 +82,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    chartkick (5.0.5)
-    coderay (1.1.3)
     concurrent-ruby (1.2.3)
     crass (1.0.6)
     date (3.3.4)
@@ -98,8 +96,6 @@ GEM
       warden (~> 1.2.3)
     erubi (1.12.0)
     globalid (1.2.1)
-      activesupport (>= 6.1)
-    groupdate (6.4.0)
       activesupport (>= 6.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -143,9 +139,6 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.4)
-    pry (0.14.2)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -153,8 +146,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (2.2.8)
-    rack-proxy (0.7.7)
-      rack
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.8)
@@ -200,7 +191,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    semantic_range (3.0.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -230,11 +220,6 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0, < 4.11)
-    webpacker (5.4.4)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
     websocket (1.2.10)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
@@ -249,15 +234,12 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
-  chartkick
   debug
   devise
-  groupdate
   importmap-rails
   jbuilder
   mysql2 (~> 0.5)
   pg
-  pry
   puma (~> 5.0)
   rails (~> 7.0.0)
   selenium-webdriver
@@ -267,7 +249,6 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
-  webpacker (~> 5.0)
 
 RUBY VERSION
    ruby 3.2.0p0
